@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="" xml:lang="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta http-equiv="REFRESH" content="5400" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />		
+<title> - </title>
+
+</head>
+
+<!--[if lt IE 7]>
+	<link href="view/skin1/css/ie_style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="view/skin1/js/ie_png.js"></script>
+    <script type="text/javascript">
+       ie_png.fix('.png');
+	</script>
+<![endif]-->
+
+<link rel='stylesheet' type='text/css' href='http://localhost:81/htg.com.vn/view/skin1/css/style.css'>
+<link rel='stylesheet' type='text/css' href='http://localhost:81/htg.com.vn/view/skin1/css/blockui.css'>
+<link rel='stylesheet' type='text/css' href='http://localhost:81/htg.com.vn/view/skin1/css/jquery-ui.css'>
+<link rel='stylesheet' type='text/css' href='http://localhost:81/htg.com.vn/view/skin1/css/jquery.tabs.css'>
+
+<script type='text/javascript' language='javascript' src='http://localhost:81/htg.com.vn/view/skin1/js/jquery.js'></script>
+<script type='text/javascript' language='javascript' src='http://localhost:81/htg.com.vn/view/skin1/js/jquery.blockUI.js'></script>
+<script type='text/javascript' language='javascript' src='http://localhost:81/htg.com.vn/view/skin1/js/maxheight.js'></script>
+<script type='text/javascript' language='javascript' src='http://localhost:81/htg.com.vn/view/skin1/js/jquery.tabs.pack.js'></script>
+<script type='text/javascript' language='javascript' src='http://localhost:81/htg.com.vn/component/ckeditor/ckeditor.js'></script>
+<script language="javascript">
+var HTTP_SERVER = 'http://localhost:81/htg.com.vn/';
+</script>
+<script type='text/javascript' language='javascript' src='http://localhost:81/htg.com.vn/view/skin1/js/common.js'></script>
+<script type='text/javascript' language='javascript' src='http://localhost:81/htg.com.vn/view/skin1/js/cart.js'></script>
+
+
+
+<body>
+<div id="ben-main">
+    
+    <div id="ben-header">
+    <div id="ben-top">
+        
+    
+        <div class="clearer">&nbsp;</div>
+        
+        <div class="ben-navigation">
+    
+            <ul id="ben-main-nav">
+                <li><a class='current-tab' href='http://localhost:81/htg.com.vn/'>Trang chủ</a></li><li><a  href='http://localhost:81/htg.com.vn/site/default/gioithieu'>Giới thiệu</a></li><li><a >Công trình</a><ul><li><a  href='http://localhost:81/htg.com.vn/site/default/bietthu'>Biệt thự</a></li><li><a  href='http://localhost:81/htg.com.vn/site/default/nhapho'>Nhà phố</a></li><li><a >Cafe - Karaoke - Nhà hàng</a><ul><li><a  href='http://localhost:81/htg.com.vn/site/default/cafe'>Cafe</a></li><li><a  href='http://localhost:81/htg.com.vn/site/default/karaoke'>Karaoke</a></li><li><a  href='http://localhost:81/htg.com.vn/site/default/nhahang'>Nhà hàng</a></li></ul></li><li><a >Công trình công cộng và quy hoạch</a><ul><li><a  href='http://localhost:81/htg.com.vn/site/default/congtrinhcongcong'>Công trình công cộng</a></li><li><a  href='http://localhost:81/htg.com.vn/site/default/quyhoach'>Quy hoạch</a></li></ul></li></ul></li><li><a  href='http://localhost:81/htg.com.vn/site/default/tintuc'>Tin tức</a></li><li><a  href='http://localhost:81/htg.com.vn/site/default/congtrinhthucte'>Công trình thực tế</a></li><li><a  href='http://localhost:81/htg.com.vn/site/default/lienhe'>Liên hệ</a></li>            </ul>
+    
+            <div class="clearer">&nbsp;</div>
+    
+        </div>
+        
+    </div>
+</div>
+
+<script src="http://localhost:81/htg.com.vn/view/skin1/js/menu.js" language="javascript"></script>
+	
+	<div id="ben-content">
+    	<div class="ben-three-columns">
+	<div class="ben-sidebar ben-left">
+    	        <script type='text/javascript' language='javascript' src='http://localhost:81/htg.com.vn/view/skin1/js/menu-collapsed.js'></script>
+                    <div class="ben-section">
+                    	<div class="ben-section-title">Công trình</div>
+                        <div class="ben-section-content">
+                        	<ul id="menu">
+                                <li><div class='collape'><a  href='http://localhost:81/htg.com.vn/site/default/bietthu'>Biệt thự</a><div class="clearer">^&nbsp;</div></div></li><li><div class='collape'><a  href='http://localhost:81/htg.com.vn/site/default/nhapho'>Nhà phố</a><div class="clearer">^&nbsp;</div></div></li><li><div class='collape'><a class='left'>Cafe - Karaoke - Nhà hàng</a><span class='collape right'>[+]</span><div class="clearer">&nbsp;</div></div><ul id='cafekaraokenhang'><li><div class='collape'><a  href='http://localhost:81/htg.com.vn/site/default/cafe'>Cafe</a><div class="clearer">^&nbsp;</div></div></li><li><div class='collape'><a  href='http://localhost:81/htg.com.vn/site/default/karaoke'>Karaoke</a><div class="clearer">^&nbsp;</div></div></li><li><div class='collape'><a  href='http://localhost:81/htg.com.vn/site/default/nhahang'>Nhà hàng</a><div class="clearer">^&nbsp;</div></div></li></ul></li><li><div class='collape'><a class='left'>Công trình công cộng và quy hoạch</a><span class='collape right'>[+]</span><div class="clearer">&nbsp;</div></div><ul id='congtrinhcongcongquykhoach'><li><div class='collape'><a  href='http://localhost:81/htg.com.vn/site/default/congtrinhcongcong'>Công trình công cộng</a><div class="clearer">^&nbsp;</div></div></li><li><div class='collape'><a  href='http://localhost:81/htg.com.vn/site/default/quyhoach'>Quy hoạch</a><div class="clearer">^&nbsp;</div></div></li></ul></li>                            </ul>
+                        </div>
+                    </div>
+<script language="javascript">
+$(document).ready(function(){
+		$("#").show();
+	});
+</script>                <div class="ben-section">
+
+	<div class="ben-section-title">Hổ trợ online</div>
+    
+    <div class="ben-section-content">
+    	    	
+    	
+    </div>
+
+</div>                <style>
+#container td
+{
+	border:thin solid;
+	padding:2px;
+	text-align:right;
+}
+#container th
+{
+	border:thin solid;
+	padding:2px;
+}
+</style>
+</style>
+<div class="ben-section">
+
+	<div class="ben-section-title">Thông tin cần biết</div>
+    
+    <div class="ben-section-content">
+    	 <div id="container">
+            <ul class="tabs-nav">
+                <li class="tabs-selected"><a href="#fragment-tigia"><span>Tỉ giá</span></a></li>
+                <li class="tabs"><a href="#fragment-giavang"><span>Giá vàng</span></a></li>
+            </ul>
+            <div id="fragment-tigia" class="tabs-container">
+            	        
+      <p>
+      Từ
+       <select id="formrate">
+        	<option value="1">VND</option>
+			<option value="20935">USD</option>
+			<option value="21733.8">AUD</option>
+			<option value="29294.41">EUR</option>
+			<option value="275.81">JPY</option>
+			<option value="33330.78">GBP</option>
+          
+        </select>
+        Đến
+        <select id="torate">
+        	<option value="1">VND</option>
+			<option value="20935" selected="selected">USD</option>
+			<option value="21733.8" >AUD</option>
+			<option value="29294.41" >EUR</option>
+			<option value="275.81" >JPY</option>
+			<option value="33330.78" >GBP</option>
+        </select>
+        
+      </p>
+       
+       
+       
+       <p></p>
+       <p>
+       	<input type="text" id="amount" class="ben-textbox number" />&nbsp;&nbsp;
+        <input type="button" class="ben-button" value="Qui đổi" onclick="changeRate()"/>
+       </p>
+       
+       
+      
+      
+      
+      
+      <p></p>
+      <p>
+        <input type="text" id="result" class="ben-textbox number" readonly="readonly"/>
+      </p>
+<script language="javascript">
+function changeRate()
+{
+	var result = eval($("#amount").val().replace(/,/g,"")) * eval($("#formrate").val()) / eval($("#torate").val());
+	$("#result").val(numberView(result));
+}
+$(document).ready(function() {
+  // Handler for .ready() called.
+  	$(".number").keyup(function (e)
+		{
+			//alert(formateNumber($(this).val()))
+			num = formateNumber($(this).val().replace(/,/g,""));
+			$(this).val(num)
+		});
+	$(".number").keypress(function (e)
+		{
+			
+		  return isNumber(e.which);
+		});
+});
+	
+</script>
+        <table cellspacing="1" border="0" class="tbl-exch">
+        <tbody>
+            <tr class="title_tygia">
+                <th width="50px">Mã NT</th>
+                <th width="60px">Mua</th>
+                <th width="60px">Bán</th>
+            </tr>
+            <tr>
+                <td class="code">USD</td>
+                <td class="number">20,935.00</td>
+                <td class="number">20,940.00</td>
+            </tr>
+
+            <tr>
+                <td class="code">AUD</td>
+                <td class="number">21,733.80</td>
+                <td class="number">22,283.70</td>
+            </tr>
+
+            <tr>
+                <td class="code">EUR</td>
+                <td class="number">29,294.41</td>
+                <td class="number">29,885.40</td>
+            </tr>
+
+            <tr>
+                <td class="code">JPY</td>
+                <td class="number">275.81</td>
+                <td class="number">285.08</td>
+            </tr>
+
+            <tr>
+                <td class="code">GBP</td>
+                <td class="number">33,330.78</td>
+                <td class="number">34,140.17</td>
+            </tr>
+
+    
+        </tbody>
+        </table>
+        <div class="ben-text-left ben-other">(Nguồn: vietcombank)</div>            </div>
+            <div id="fragment-giavang" class="tabs-container">
+            	<center>
+	<div class="goldrate ben-section-content ben-text-left">
+		 <div>Tỷ giá ngày: 19-10-2011</div> <em>Bảng tỷ giá lần 06 cập nhật 13:55</em> <table cellspacing="1" cellpadding="1" border="0"><tr class="title"><td>Loại</td><td>Mua</td><td>Bán</td></tr><tr class="row2"><td><b>Vàng SBJ</b></td><td><b>4.346.000</b></td><td><b>4.364.000</b></td></tr><tr class="row1"><td><b>Vàng SJC</b></td><td><b>4.345.000</b></td><td><b>4.365.000</b></td></tr><tr class="row2"><td>Vàng 24 K</td><td>4.310.000</td><td>4.365.000</td></tr><tr class="row1"><td>Vàng 95 %</td><td>4.074.000</td><td>&nbsp;</td></tr><tr class="row2"><td>Vàng 18 K (75%)</td><td>3.175.000</td><td>3.289.000</td></tr><tr class="row1"><td>Vàng 14 K (58.3%)</td><td>2.479.000</td><td>2.571.000</td></tr><tr class="row2"><td>Vàng 10 K (41.7%)</td><td>1.757.000</td><td>1.845.000</td></tr><tr class="row1"><td>USD</td><td>20.925</td><td>20.940</td></tr></table>  		<div class="ben-text-left ben-other">(Nguồn: sacombank)</div>
+    </div>
+   
+</center>
+            </div>
+         </div>
+    	
+    	
+    </div>
+
+</div>
+<script language="javascript">
+$(document).ready(function() {
+	$('#container').tabs({ fxSlide: true, fxFade: true, fxSpeed: 'slow' });
+});
+</script>                <div class="ben-section">
+
+	<div class="ben-section-title">Liên kết website</div>
+    
+    <div class="ben-section-content">
+    	<select onchange="window.open( this.value,'','','')">
+        	<option value=""></option>
+        	<br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>D:\xampp\htdocs\htg.com.vn\view\skin1\template\sitebar\weblink.tpl</b> on line <b>8</b><br />
+        </select>
+    	
+    	
+    </div>
+
+</div>                <div class="ben-section">
+
+	<div class="ben-section-title">Số lượt truy cập</div>
+    
+    <div class="ben-section-content">
+    	0    	
+    	
+    </div>
+
+</div>            </div>
+    
+	<div class="ben-left" id="ben-maincontent">
+    	<div class="ben-section">
+        
+        	<div class=" ben-section-title">Homepage</div>
+            
+            <div class=" ben-section-content">
+            
+            	            	<link rel='stylesheet' type='text/css' href='http://localhost:81/htg.com.vn/view/skin1/css/product.css'>
+            </div>
+            
+            
+        	
+        </div>
+    </div>
+    
+    <div class="ben-sidebar ben-right">
+    	        <div id="ben-member" class="ben-section">
+</div>
+<script language="javascript">
+$(document).ready(function(e) {
+	$("#ben-member").load("http://localhost:81/htg.com.vn/?route=sitebar/login/login");
+});
+</script>                <div class="ben-section">
+
+	<div class="ben-section-title">Tìm kiếm</div>
+    
+    <div class="ben-section-content">
+    	<input type="text" class="ben-textbox" id="txt_search" name="txt_search" value="">
+        <input type="button" class="ben-button" id="btnSearch" value="Tìm">
+    </div>
+</div>
+<script language="javascript">
+$("#btnSearch").click(function(){
+	var keyword = trim($("#txt_search").val()," ");
+	if(keyword!="")
+		window.location = HTTP_SERVER+"site/default/search/keyword/"+keyword;							   
+});
+</script>                <div class="ben-section">
+
+	<div class="ben-section-title">Giỏ hàng</div>
+    
+    <div id="sitebarcartlist" class="ben-section-content">
+    	
+    	
+    	
+    </div>
+    <div class="ben-section-content">
+		<a href="http://localhost:81/htg.com.vn/site/default/cart">Xem giỏ hàng</a>
+    </div>
+</div>
+<script language="javascript">
+$(document).ready(function() {
+	$("#sitebarcartlist").load(HTTP_SERVER+"?route=sitebar/cart/getList");
+});
+</script>                                            </div>
+    
+    <div class="clearer">&nbsp;</div>
+
+</div>    </div>
+    
+    <div id="ben-footer">
+
+    <div class="ben-left" id="ben-footer-left">
+        
+        <img src="http://localhost:81/htg.com.vn/view/skin1/image/logo-small.gif" alt="" class="ben-left" />
+        
+        <p>&copy; 2010 Customer Name. All rights Reserved</p>
+
+        <p class="ben-other">
+        	<a target="_blank" href="http://ben-solution.com">Website Design</a> by <a target="_blank" href="http://ben-solution.com">www.ben-solution.com</a></p>
+        
+        <div class="clearer">&nbsp;</div>
+
+    </div>
+
+    <!--<div class="ben-right" id="ben-footer-right">
+
+        <p class="ben-small">
+        	<a href="index.php?route=page/home">Home</a> <span class="ben-text-separator">|</span> 
+            <a href="index.php?route=pagesample/leftsidebar">Left Sidebar</a> <span class="ben-text-separator">|</span> 
+            <a href="index.php?route=pagesample/singlecolumn">Single Column</a> <span class="ben-text-separator">|</span> 
+            <a href="index.php?route=pagesample/threecolumn">Three Column</a> <span class="ben-text-separator">|</span> 
+            <strong><a href="index.php?route=pagesample/styledemo">Style Demo</a></strong> <span class="ben-text-separator">|</span> 
+            <a href="#top" class="ben-other">Page Top &uarr;</a>
+        </p>
+    
+    </div>-->
+
+    <div class="clearer">&nbsp;</div>
+
+</div> 
+
+</div>
+
+</body>
+
+</html>
