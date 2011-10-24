@@ -34,6 +34,8 @@ class ControllerPageHome extends Controller
 			/*$arr = array("gioithieu");
 			$this->data['producthome'] = $this->loadModule('module/information','index',$arr);*/
 			//
+			$this->data['footer'] = $this->loadModule('common/footer');
+			
 			$this->loadSiteBar();
 			
 		}
