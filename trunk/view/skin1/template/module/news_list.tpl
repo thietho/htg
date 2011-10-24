@@ -1,5 +1,3 @@
-<h2><?php echo $sitemap['sitemapname']?></h2>
-<div class="ben-item-separator"></div>
 
 <?php foreach($medias as $media) {?>
 <div class="ben-post">

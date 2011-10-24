@@ -134,8 +134,8 @@ class ControllerPageDetail extends Controller
 						{
 							$template = array(
 											  'template' => "module/album_list.tpl",
-											  'width' => 150,
-											  'height' =>114
+											  'width' => 170,
+											  'height' =>170
 											  );
 							$arr = array($this->document->sitemapid,12,"",$template);
 							$this->data['module'] = $this->loadModule('module/productlist','index',$arr);
@@ -145,8 +145,8 @@ class ControllerPageDetail extends Controller
 						{
 							$template = array(
 										  'template' => "module/album_detail.tpl",
-										  'width' => 520,
-										  'height' =>450
+										  'width' => 654,
+										  'height' =>654
 										  );
 							$arr = array($this->document->sitemapid,12,$template);
 							$this->data['module'] = $this->loadModule('module/pagedetail','getFormProduct',$arr);

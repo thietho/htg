@@ -73,3 +73,6 @@
         </div>
     </div>
 </div>
+<p>
+    <?php echo $post['description']?>
+</p>
