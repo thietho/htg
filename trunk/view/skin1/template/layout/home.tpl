@@ -44,8 +44,6 @@ var HTTP_SERVER = '<?php echo HTTP_SERVER?>';
 	<div id="ben-content">
     	<?php echo $content?>
     </div>
-    
-    <?php echo $footer?> 
 
 </div>
 
