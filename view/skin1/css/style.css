@@ -26,8 +26,8 @@ html {
 }
 
 body {
-	background: #FFF;
-	color: #444;
+	background:url(../image/bg-body.png);
+	color: #fff;
 	font: normal 75% Arial, Tahoma, Helvetica, sans-serif;
 	line-height: 1.5;
 }
@@ -63,7 +63,7 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin: 0;}
 
 /* Links */
 a {
-	color: #000000;
+	color: #fff;
 	text-decoration: none;
 	cursor:pointer;
 }
@@ -365,6 +365,7 @@ input.ben-button:active {border-style: inset;}
 #ben-main {
 	margin: 0 auto;
 	width: 1000px;
+	background:#000
 }
 
 
@@ -381,7 +382,7 @@ input.ben-button:active {border-style: inset;}
 	width: 1000px;
 	padding-bottom: 0px;
 	background:url(../image/bg-header.png) repeat-x #000;
-	height:175px;
+	height:165px;
 }
 
 
@@ -417,11 +418,13 @@ z-index:100;
 
 #ben-main-nav a{
 display:block;
-padding:3px 5px;
-border:1px solid #CCCCCC;
+padding:6px 38px;
 color:#fff;
 text-decoration:none;
-background-color:#CCCCCC;
+background-color:#000;
+font-size:1.2em;
+font-weight:bold;
+text-transform:uppercase;
 }
 
 #ben-main-nav a:hover{
@@ -495,13 +498,13 @@ display:block;
 
 #ben-maincontent{}
 .ben-two-columns #ben-maincontent{width: 750px;}
-.ben-three-columns #ben-maincontent{width:570px; margin-left:5px;}
+.ben-three-columns #ben-maincontent{width:694px;}
 .ben-three-columns-right #ben-maincontent{width:520px; margin-right:20px}
 
 
 /* Sidebar */
 #ben-sidebar{} /*Div chua 2 sidebar*/
-.ben-sidebar{width:210px;}
+.ben-sidebar{width:306px;}
 
 
 /* Columns */
@@ -542,23 +545,21 @@ display:block;
 
 
 /* Sections */
-.ben-section {margin-bottom: 10px; border:1px solid #DDDDDD}
+.ben-section {margin-bottom: 10px;}
 .ben-sidebar .ben-section{}
 #ben-maincontent .ben-section{}
 
 .ben-section-content{padding:5px 15px}
-.ben-sidebar .ben-section-content{padding:5px}
+.ben-sidebar .ben-section-content{padding:5px;background:url(../image/bg-sitebar.png) repeat-y}
 #ben-maincontent .ben-section-content{padding:5px 10px}
 
 .ben-section-title {
-	background-color: #F9F9F9;
-	border-top: 2px solid #DDD;
-	color: #7A7A7A;
-	font: bold 1.2em sans-serif;
-	margin-bottom: 5px;
-	padding: 7px 10px 6px;
+	background:url(../image/bg-title.png) repeat-x;
+	font: bold 1.5em sans-serif;
+	padding: 10px 10px;
+	height:24px;
 }
-.ben-sidebar .ben-section-title {margin-bottom: 8px;}
+.ben-sidebar .ben-section-title {}
 #ben-maincontent .ben-section-title {margin-bottom: 8px;}
 
 
