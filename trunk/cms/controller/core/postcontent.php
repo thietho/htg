@@ -177,6 +177,14 @@ class ControllerCorePostcontent extends Controller
 			$this->data['hasProductPrice'] = true;
 			$this->data['hasSource'] = false;
 		}
+		if($route == "module/album")
+		{
+			$this->data['hasProperties'] = true;
+			$this->data['hasPrice'] = false;
+			$this->data['hasSubInfor'] = false;
+			$this->data['hasProductPrice'] = false;
+			$this->data['hasSource'] = false;
+		}
 		if($route == "module/video")
 		{
 			$this->data['hasVideo'] = true;

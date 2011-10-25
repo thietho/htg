@@ -147,7 +147,7 @@
             	<div>
                 	
                 	
-                    <p>
+                    <!--<p>
                     	<label>Brand</label><br />
                         <select name="nhanhieu">
                         	<option value=""></option>
@@ -155,7 +155,7 @@
                         	<option value="<?php echo $it['categoryid']?>" <?php echo in_array($it['categoryid'],$properties)?'selected="selected"':''; ?>><?php echo $this->string->getPrefix("&nbsp;&nbsp;&nbsp;&nbsp;",$it['level']) ?><?php echo $it['categoryname']?></option>                        
                         	<?php } ?>
                         </select>
-                    </p>
+                    </p>-->
                     <p>
                     	<label>Status</label>
                         <?php foreach($statuspro as $it){ ?>

@@ -44,7 +44,7 @@ function initialize(x,y,zoom)
 
 
 </script>
-<div id="map_canvas" style="width: 500px; height: 500px;"></div>
+<div id="map_canvas" style="width: 674px; height: 500px;color:#000000"></div>
 <script language="javascript">
 
 	initialize(x,y,zoom);

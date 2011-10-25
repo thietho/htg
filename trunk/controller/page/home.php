@@ -11,7 +11,7 @@ class ControllerPageHome extends Controller
 		if($this->cachehtml->iscacht($this->name) == false)
 		{
 			//Banner home
-			$template = array(
+			/*$template = array(
 						  'template' => "home/banner.tpl",
 						  'width' => 548,
 						  'height' =>548
@@ -29,11 +29,19 @@ class ControllerPageHome extends Controller
 			$medias = $this->getProduct();
 			
 			$arr = array("",6,"",$template,$medias);
-			$this->data['producthome'] = $this->loadModule('module/productlist','index',$arr);
+			$this->data['producthome'] = $this->loadModule('module/productlist','index',$arr);*/
 			
 			/*$arr = array("gioithieu");
 			$this->data['producthome'] = $this->loadModule('module/information','index',$arr);*/
 			//
+			$template = array(
+											  'template' => "module/news_list.tpl",
+											  'width' => 180,
+											  'height' =>180
+											  );
+			$arr = array("event",10,"",$template);
+			
+			$this->data['producthome'] = $this->loadModule('module/pagelist','getList',$arr);
 			$this->data['footer'] = $this->loadModule('common/footer');
 			
 			$this->loadSiteBar();
@@ -57,11 +65,27 @@ class ControllerPageHome extends Controller
 		$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');*/
 		
 		//Rigth sitebar
-		$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
+		$template = array(
+					  'template' => "sitebar/news.tpl",
+					  'width' => 100,
+					  'height' =>100
+					  );
+		$arr = array("tintuc",5,"",$template);
+		$this->data['rightsitebar']['tintuc'] = $this->loadModule('sitebar/news','index',$arr);
+		
+		$template = array(
+					  'template' => "sitebar/news.tpl",
+					  'width' => 100,
+					  'height' =>100
+					  );
+		$arr = array("congtrinhthucte",5,"",$template);
+		$this->data['rightsitebar']['congtrinhthucte'] = $this->loadModule('sitebar/news','index',$arr);
+		
+		/*$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
 		$this->data['rightsitebar']['search'] = $this->loadModule('sitebar/search');
 		$this->data['rightsitebar']['cart'] = $this->loadModule('sitebar/cart');
 		$this->data['rightsitebar']['banner'] = $this->loadModule('sitebar/banner');
-		$this->data['rightsitebar']['question'] = $this->loadModule('sitebar/question');
+		$this->data['rightsitebar']['question'] = $this->loadModule('sitebar/question');*/
 	}
 	
 	function getProduct()

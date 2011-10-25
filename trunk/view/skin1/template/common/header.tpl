@@ -16,5 +16,5 @@
         
     </div>
 </div>
-
+<?php echo $products?>
 <script src="<?php echo HTTP_SERVER.DIR_JS?>menu.js" language="javascript"></script>
