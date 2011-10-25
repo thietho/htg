@@ -24,12 +24,17 @@ class ControllerModuleProductlist extends Controller
 		
 		$step = (int)$this->request->get['step'];
 		$to = $count;
-		
+		//
+		$arrsitemap = array();
+		$this->model_core_sitemap->getTreeSitemapEdit($sitemapid, "", $arrsitemap, $siteid);
+		//print_r($arrsitemap);
+		$arrsitemapid = $this->string->matrixToArray($arrsitemap,"sitemapid");
 		//Get list
 		$queryoptions = array();
 		$queryoptions['mediaparent'] = '%';
 		$queryoptions['mediatype'] = '%';
-		$queryoptions['refersitemap'] = $sitemapid;
+		
+		$queryoptions['refersitemap'] = $arrsitemapid;
 		
 		if($mediaid == "")
 		{
