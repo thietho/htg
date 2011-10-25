@@ -73,6 +73,6 @@
         </div>
     </div>
 </div>
-<p>
+<div class="ben-editor">
     <?php echo $post['description']?>
-</p>
+</div>

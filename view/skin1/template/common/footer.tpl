@@ -2,14 +2,9 @@
 
     <div class="ben-left" id="ben-footer-left">
         
-        <img src="<?php echo HTTP_SERVER.DIR_IMAGE?>logo-small.gif" alt="" class="ben-left" />
+        <img src="<?php echo HTTP_SERVER.DIR_IMAGE?>logo-small.png" alt="" class="ben-left" />
         
-        <p>&copy; 2010 Customer Name. All rights Reserved</p>
-
-        <p class="ben-other">
-        	<a target="_blank" href="http://ben-solution.com">Website Design</a> by <a target="_blank" href="http://ben-solution.com">www.ben-solution.com</a></p>
         
-        <div class="clearer">&nbsp;</div>
 
     </div>
 
