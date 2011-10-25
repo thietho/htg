@@ -397,8 +397,17 @@ input.ben-button:active {border-style: inset;}
 /* Splash */
 #ben-splash {padding-top: 32px;}
 
-
-
+#ben-sileshow
+{
+	background:url(../image/bg-sileshow.png) no-repeat;
+	height:232px;
+}
+#ben-sileshowproduct
+{
+	width:900px;
+	margin-top:44px;
+	position:absolute;
+}
 /* Main Menu */
 /* Main Level 1 */
 .ben-navigation
@@ -559,7 +568,7 @@ display:block;
 	height:24px;
 	text-transform:uppercase;
 }
-.ben-sidebar .ben-section-title {}
+.ben-sidebar .ben-section-title {text-align:center;}
 #ben-maincontent .ben-section-title {margin-bottom: 8px;}
 
 
@@ -570,7 +579,6 @@ display:block;
 
 /*---------- FOOTER AREA ------------*/
 #ben-footer {
-	border-top: 1px solid #DDD;
 	color: #777;
 	padding: 16px 5px 4px;
 }

@@ -200,7 +200,7 @@ class ControllerModuleProductlist extends Controller
 				);
 				
 			}
-			
+			//print_r($this->data['medias']);
 			
 			
 		}

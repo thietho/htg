@@ -16,5 +16,9 @@
         
     </div>
 </div>
-<?php echo $products?>
+<div id="ben-sileshow">
+	<div id="ben-sileshowproduct">
+		<?php echo $products?>
+	</div>
+</div>
 <script src="<?php echo HTTP_SERVER.DIR_JS?>menu.js" language="javascript"></script>

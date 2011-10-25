@@ -177,11 +177,29 @@ class ControllerPageDetail extends Controller
 		$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');*/
 		
 		//Rigth sitebar
-		$this->data['rightsitebar']['login'] = $this->loadModule('sitebar/login');
-		$this->data['rightsitebar']['search'] = $this->loadModule('sitebar/search');
-		$this->data['rightsitebar']['cart'] = $this->loadModule('sitebar/cart');
-		$this->data['rightsitebar']['banner'] = $this->loadModule('sitebar/banner');
-		$this->data['rightsitebar']['question'] = $this->loadModule('sitebar/question');
+		$template = array(
+					  'template' => "sitebar/congtrinhhome.tpl",
+					  'width' => 100,
+					  'height' =>100
+					  );
+		$arr = array("sanpham",$template);
+		$this->data['rightsitebar']['sanpham'] = $this->loadModule('sitebar/sitemap','index',$arr);
+		
+		$template = array(
+					  'template' => "sitebar/news.tpl",
+					  'width' => 100,
+					  'height' =>100
+					  );
+		$arr = array("tintuc",5,"",$template);
+		$this->data['rightsitebar']['tintuc'] = $this->loadModule('sitebar/news','index',$arr);
+		
+		$template = array(
+					  'template' => "sitebar/news.tpl",
+					  'width' => 100,
+					  'height' =>100
+					  );
+		$arr = array("congtrinhthucte",5,"",$template);
+		$this->data['rightsitebar']['congtrinhthucte'] = $this->loadModule('sitebar/news','index',$arr);
 	}
 }
 ?>

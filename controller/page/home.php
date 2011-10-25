@@ -65,6 +65,15 @@ class ControllerPageHome extends Controller
 		$this->data['leftsitebar']['hitcounter'] = $this->loadModule('sitebar/hitcounter');*/
 		
 		//Rigth sitebar
+		
+		$template = array(
+					  'template' => "sitebar/congtrinhhome.tpl",
+					  'width' => 100,
+					  'height' =>100
+					  );
+		$arr = array("sanpham",$template);
+		$this->data['rightsitebar']['sanpham'] = $this->loadModule('sitebar/sitemap','index',$arr);
+		
 		$template = array(
 					  'template' => "sitebar/news.tpl",
 					  'width' => 100,

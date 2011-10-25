@@ -23,9 +23,3 @@
     </ul>
 </div>
 <?php } ?>
-
-<div class="ben-post-pagination ben-post-pagination-bottom">
-    <?php echo $prevlink?>
-    <?php echo $nextlink?>
-    <div class="clearer">&nbsp;</div>
-</div>
