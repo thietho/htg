@@ -42,7 +42,7 @@ class ControllerPageHome extends Controller
 			$arr = array("event",10,"",$template);
 			
 			$this->data['producthome'] = $this->loadModule('module/pagelist','getList',$arr);
-			$this->data['footer'] = $this->loadModule('common/footer');
+			
 			
 			$this->loadSiteBar();
 			

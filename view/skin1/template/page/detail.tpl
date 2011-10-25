@@ -13,7 +13,7 @@
             	<?php echo $module?>
             
             </div>
-            <?php echo $footer?>
+            
         
         </div>
     </div>

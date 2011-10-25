@@ -157,7 +157,7 @@ class ControllerPageDetail extends Controller
 					break;
 				}
 			}
-			$this->data['footer'] = $this->loadModule('common/footer');
+			
 			$this->loadSiteBar();
 		}
 		$this->id="content";

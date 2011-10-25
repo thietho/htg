@@ -502,7 +502,7 @@ display:block;
 
 
 /*---------- BODY AREA ------------*/
-#ben-content {margin: 24px auto; width:1000px}
+#ben-content { width:1000px}
 
 #ben-maincontent{}
 .ben-two-columns #ben-maincontent{width: 750px;}
