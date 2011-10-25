@@ -11,7 +11,7 @@
             	<?php echo $producthome?>
             </div>
             
-            <?php echo $footer?>
+            
         	
         </div>
     </div>
