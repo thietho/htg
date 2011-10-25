@@ -107,6 +107,7 @@ class ControllerPageDetail extends Controller
 						}
 					break;
 					case "module/product":
+					
 						if($id == "")
 						{
 							$template = array(
@@ -130,6 +131,7 @@ class ControllerPageDetail extends Controller
 						}
 					break;
 					case "module/album":
+					case "group":
 						if($id == "")
 						{
 							$template = array(
