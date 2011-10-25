@@ -11,7 +11,7 @@ class ControllerCommonHeader extends Controller
 		$template = array(
 							  'template' => "common/product.tpl",
 							  'width' => 0,
-							  'height' =>50
+							  'height' =>150
 							  
 							  );
 		$arr = array("",12,"",$template,$medias);
