@@ -9,14 +9,8 @@
     	<table>
         	<?php foreach($childs as $item) {?>
         	<tr>
-            	<td width="100px">
-                	
-                        
-                        <a href="<?php echo HTTP_SERVER?>site/<?php echo $this->member->getSiteId()?>/<?php echo $item['sitemapid']?>"><img src="<?php echo HTTP_SERVER.DIR_IMAGE?>sitemap/<?php echo $item['sitemapid']?>.png" /></a>
-                        
-                    
-                </td>
-                <td><a href="<?php echo HTTP_SERVER?>site/<?php echo $this->member->getSiteId()?>/<?php echo $item['sitemapid']?>"><?php echo $item['sitemapname']?></a></td>
+            	
+                <td><h4><a href="<?php echo HTTP_SERVER?>site/<?php echo $this->member->getSiteId()?>/<?php echo $item['sitemapid']?>"><?php echo $item['sitemapname']?></a></h4></td>
             </tr>
             <?php } ?>
         </table>

@@ -9,7 +9,7 @@
     	<table>
         	<?php foreach($medias as $media) {?>
         	<tr>
-            	<td width="100px">
+            	<td width="50px">
                 	 <?php if($media['imagethumbnail'] !=""){ ?>
                         
                         <a href="<?php echo $media['link']?>"><img src='<?php echo $media['imagethumbnail']?>' /></a>
