@@ -68,24 +68,24 @@ class ControllerPageHome extends Controller
 		
 		$template = array(
 					  'template' => "sitebar/congtrinhhome.tpl",
-					  'width' => 100,
-					  'height' =>100
+					  'width' => 70,
+					  'height' =>70
 					  );
 		$arr = array("sanpham",$template);
 		$this->data['rightsitebar']['sanpham'] = $this->loadModule('sitebar/sitemap','index',$arr);
 		
 		$template = array(
 					  'template' => "sitebar/news.tpl",
-					  'width' => 100,
-					  'height' =>100
+					  'width' => 70,
+					  'height' =>70
 					  );
 		$arr = array("tintuc",5,"",$template);
 		$this->data['rightsitebar']['tintuc'] = $this->loadModule('sitebar/news','index',$arr);
 		
 		$template = array(
 					  'template' => "sitebar/news.tpl",
-					  'width' => 100,
-					  'height' =>100
+					  'width' => 70,
+					  'height' =>70
 					  );
 		$arr = array("congtrinhthucte",5,"",$template);
 		$this->data['rightsitebar']['congtrinhthucte'] = $this->loadModule('sitebar/news','index',$arr);

@@ -426,11 +426,11 @@ z-index:100;
 
 #ben-main-nav a{
 display:block;
-padding:6px 25px;
+padding:6px 38px;
 color:#fff;
 text-decoration:none;
 background-color:#000;
-font-size:1.5em;
+font-size:1.2em;
 font-weight:bold;
 text-transform:uppercase;
 }
@@ -553,7 +553,7 @@ display:block;
 
 
 /* Sections */
-.ben-section {margin-bottom: 10px;}
+.ben-section {margin-bottom: 0px;}
 .ben-sidebar .ben-section{}
 #ben-maincontent .ben-section{}
 
@@ -563,9 +563,9 @@ display:block;
 
 .ben-section-title {
 	background:url(../image/bg-title.png) repeat-x;
-	font: bold 1.5em sans-serif;
-	padding: 10px 10px;
-	height:24px;
+	font: bold 1.2em sans-serif;
+	padding: 8px 10px;
+	
 	text-transform:uppercase;
 }
 .ben-sidebar .ben-section-title {text-align:center;}
