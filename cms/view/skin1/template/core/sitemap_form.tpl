@@ -44,6 +44,12 @@ foreach($sitemapparent as $result)
             </p>
             
             <p>
+            	<label>Name eng</label><br />
+            	<input type="text" name="sitemapnameen" value="<?php echo $sitemap['sitemapnameen']?>" class="text" size="80"/>
+                <?php echo $errors['sitemapnameen']?>
+            </p>
+            
+            <p>
                 <label>Module</label>
             	<select name="moduleid">
 <?php

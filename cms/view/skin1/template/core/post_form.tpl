@@ -66,12 +66,20 @@
                             <label><?php echo $entry_title?></label><br>
                             <input class="text" type="text" name="title" value="<?php echo $title?>" size="60" />
                         </p>
+                        <p>
+                            <label><?php echo $entry_title?> eng</label><br>
+                            <input class="text" type="text" name="titleen" value="<?php echo $titleen?>" size="60" />
+                        </p>
                         <?php } ?>
                         
                         <?php if($hasSummary) {?>
                         <p>
                             <label><?php echo $entry_summary?></label><br>
                             <textarea class="text" rows="3" cols="70" name="summary"><?php echo $summary?></textarea>
+                        </p>
+                        <p>
+                            <label><?php echo $entry_summary?> eng</label><br>
+                            <textarea class="text" rows="3" cols="70" name="summaryen"><?php echo $summaryen?></textarea>
                         </p>
                         <?php } ?>
                     	<?php if($hasPrice) {?>
@@ -175,6 +183,10 @@
             	<div>
                 	<p>
                         <textarea name="description" id="editor1" cols="80" rows="10"><?php echo $description?></textarea>
+                    </p>
+                    Eng
+                    <p>
+                        <textarea name="descriptionen" id="editoren" cols="80" rows="10"><?php echo $descriptionen?></textarea>
                     </p>
                 </div>
             </div>
@@ -388,7 +400,7 @@ var DIR_UPLOADPHOTO = "<?php echo $DIR_UPLOADPHOTO?>";
 var DIR_UPLOADATTACHMENT = "<?php echo $DIR_UPLOADATTACHMENT?>";
 $(document).ready(function() { 
 	setCKEditorType('editor1',2);
-	
+	setCKEditorType('editoren',2);
 	$('#container').tabs({ fxSlide: true, fxFade: true, fxSpeed: 'slow' });
 	
 });

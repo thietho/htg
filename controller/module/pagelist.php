@@ -48,8 +48,8 @@ class ControllerModulePagelist extends Controller
 				
 				$this->data['medias'][] = array(
 					'mediaid' => $media['mediaid'],
-					'title' => $media['title'],
-					'summary' => $media['summary'],
+					'title' => $media['title'.$this->document->getPrefix($this->member->getSiteId())],
+					'summary' => $media['summary'.$this->document->getPrefix($this->member->getSiteId())],
 					'imagethumbnail' => $imagethumbnail,
 					'statusdate' => $this->date->formatMySQLDate($media['statusdate'], 'longdate', "/"),
 					'link' => $link
@@ -71,6 +71,7 @@ class ControllerModulePagelist extends Controller
 				$this->data['othernews'][$i]['statusdate'] = $this->date->formatMySQLDate($this->data['othernews'][$i]['statusdate'], 'longdate', "/");
 				$link = HTTP_SERVER."site/".$siteid."/".$sitemapid."/".$this->data['othernews'][$i]['mediaid'];
 				$this->data['othernews'][$i]['link'] = $link;
+				$this->data['othernews'][$i]['title'] = $this->data['othernews'][$i]['title'.$this->document->getPrefix($this->member->getSiteId())];
 			}
 			
 		}

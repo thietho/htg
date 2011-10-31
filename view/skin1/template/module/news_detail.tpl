@@ -16,17 +16,17 @@
 <p class="ben-text-right">
 	<b><?php echo $post['source']?></b>
 </p>
-<div class="ben-hline"></div>
 
-<?php if($othernews) {?>
+
+<!--<?php if($othernews) {?>
 <h3>Các tin khác</h3>             
 <div>
     <ul>
     	<?php foreach($othernews as $media) {?>
-        <li><a href="<?php echo $media['link']?>"><?php echo $media['title']?>&nbsp;<span class="ben-other">(<?php echo $media['statusdate']?>)</span></a></li>
+        <li><a href="<?php echo $media['link']?>"><?php echo $media['title'.$this->document->getPrefix($this->member->getSiteId())]?>&nbsp;<span class="ben-other">(<?php echo $media['statusdate']?>)</span></a></li>
         <?php } ?>    
     </ul>
 </div>
-<?php } ?>
+<?php } ?>-->
 
 <div class="clearer">&nbsp;</div>

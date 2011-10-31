@@ -88,8 +88,8 @@ class ControllerModuleProductlist extends Controller
 				$properties = $this->string->referSiteMapToArray($media['groupkeys']);
 				$this->data['medias'][] = array(
 					'mediaid' => $media['mediaid'],
-					'title' => $media['title'],
-					'summary' => $media['summary'],
+					'title' => $media['title'.$this->document->getPrefix($this->member->getSiteId())],
+					'summary' => $media['summary'.$this->document->getPrefix($this->member->getSiteId())],
 					'price' => $price,
 					'properties' => $properties,
 					'imagethumbnail' => $imagethumbnail,
@@ -193,8 +193,8 @@ class ControllerModuleProductlist extends Controller
 				$properties = $this->string->referSiteMapToArray($media['groupkeys']);
 				$this->data['medias'][] = array(
 					'mediaid' => $media['mediaid'],
-					'title' => $media['title'],
-					'summary' => $media['summary'],
+					'title' => $media['title'.$this->document->getPrefix($this->member->getSiteId())],
+					'summary' => $media['summary'.$this->document->getPrefix($this->member->getSiteId())],
 					'price' => $price,
 					'properties' => $properties,
 					'imagethumbnail' => $imagethumbnail,

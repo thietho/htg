@@ -17,8 +17,10 @@ class ControllerModulePagedetail extends Controller
 		{
 			$this->data['post']['description'] = "Updating...";
 		}
-		
-		$this->data['post']['description'] = html_entity_decode($this->data['post']['description']);
+		$this->data['post']['title'] = $this->data['post']['title'.$this->document->getPrefix($this->member->getSiteId())];
+		$this->data['post']['summary'] = $this->data['post']['summary'.$this->document->getPrefix($this->member->getSiteId())];
+		$this->data['post']['description'] = html_entity_decode($this->data['post']['description'.$this->document->getPrefix($this->member->getSiteId())]);
+		$this->data['post']['description'] = html_entity_decode($this->data['post']['description'.$this->document->getPrefix($this->member->getSiteId())]);
 		
 		if($this->data['post']['imagepath'] != "")
 		{
@@ -74,8 +76,9 @@ class ControllerModulePagedetail extends Controller
 		{
 			$this->data['post']['description'] = "Updating...";
 		}
-		$this->data['post']['summary'] = str_replace(chr(13),"<br>",$this->data['post']['summary']);
-		$this->data['post']['description'] = html_entity_decode($this->data['post']['description']);
+		$this->data['post']['title'] = $this->data['post']['title'.$this->document->getPrefix($this->member->getSiteId())];
+		$this->data['post']['summary'] = str_replace(chr(13),"<br>",$this->data['post']['summary'.$this->document->getPrefix($this->member->getSiteId())]);
+		$this->data['post']['description'] = html_entity_decode($this->data['post']['description'.$this->document->getPrefix($this->member->getSiteId())]);
 		
 		$loaisp= $this->string->referSiteMapToArray($this->data['post']['refersitemap']);
 		foreach($loaisp as $item)

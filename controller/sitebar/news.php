@@ -10,6 +10,7 @@ class ControllerSitebarNews extends Controller
 		
 		$siteid = $this->member->getSiteId();
 		$this->data['sitemap'] = $this->model_core_sitemap->getItem($sitemapid, $siteid);
+		$this->data['sitemap']['sitemapname'] = $this->data['sitemap']['sitemapname'.$this->document->getPrefix($this->member->getSiteId())];
 		if($headername!="")
 			$this->data['sitemap']['sitemapname'] = $headername;
 		
@@ -38,8 +39,8 @@ class ControllerSitebarNews extends Controller
 			
 			$this->data['medias'][] = array(
 				'mediaid' => $media['mediaid'],
-				'title' => $media['title'],
-				'summary' => $media['summary'],
+				'title' => $media['title'.$this->document->getPrefix($this->member->getSiteId())],
+				'summary' => $media['summary'.$this->document->getPrefix($this->member->getSiteId())],
 				'imagethumbnail' => $imagethumbnail,
 				'statusdate' => $this->date->formatMySQLDate($media['statusdate'], 'longdate', "/"),
 				'link' => $link

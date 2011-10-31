@@ -243,8 +243,13 @@ class ControllerCorePostcontent extends Controller
 		$this->data['mediatype'] = $this->data['post']['mediatype'];
 		$this->data['title'] = $this->data['post']['title'];
 		$this->data['summary'] = $this->data['post']['summary'];
-		$this->data['price'] = $this->data['post']['price'];
 		$this->data['description'] = $this->data['post']['description'];
+		
+		$this->data['titleen'] = $this->data['post']['titleen'];
+		$this->data['summaryen'] = $this->data['post']['summaryen'];
+		$this->data['descriptionen'] = $this->data['post']['descriptionen'];
+		
+		$this->data['price'] = $this->data['post']['price'];
 		$this->data['author'] = $this->data['post']['author'];
 		$this->data['source'] = $this->data['post']['source'];
 		$this->data['refersitemap'] = $this->data['post']['refersitemap'];
@@ -317,9 +322,14 @@ class ControllerCorePostcontent extends Controller
 		
 		$data['title'] = $this->data['post']['title'];
 		$data['summary'] = $this->data['post']['summary'];
+		$data['description'] = $this->data['post']['description'];
+
+		$data['titleen'] = $this->data['post']['titleen'];
+		$data['summaryen'] = $this->data['post']['summaryen'];
+		$data['descriptionen'] = $this->data['post']['descriptionen'];
+		
 		$data['price'] = str_replace(",","",$this->data['post']['price']);
 		$data['mediaparent'] = $this->data['post']['mediaparent'];
-		$data['description'] = $this->data['post']['description'];
 		$data['author'] = $this->data['post']['author'];
 		$data['source'] = $this->data['post']['source'];
 		$data['groupkeys'] = $this->getProperties($this->data['post']);
