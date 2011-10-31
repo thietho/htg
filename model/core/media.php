@@ -15,7 +15,8 @@ class ModelCoreMedia extends ModelCoreFile
 		
 		$sql = "Select `media`.* 
 									from `media` 
-									where status not like 'delete' AND mediaid like '%".$this->member->getSiteId()."%' " . $where . " Order by position, statusdate DESC";
+									where status not like 'delete' AND mediaid like '%default%' " . $where . " Order by position, statusdate DESC";
+		//$this->document->getPrefix($this->member->getSiteId());
 		if($to > 0)
 		{
 			$sql .= " Limit ".$from.",".$to;

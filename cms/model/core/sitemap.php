@@ -190,17 +190,20 @@ class ModelCoreSitemap extends Model
 		$siteid=$this->db->escape(@$data['siteid']);
 		$sitemapparent = $this->db->escape(@$data['sitemapparent']);
 		$sitemapname = $this->db->escape(@$data['sitemapname']);
+		$sitemapnameen = $this->db->escape(@$data['sitemapnameen']);
 		$othername = $this->db->escape(@$data['othername']);
 		$position=(int)@$data['position'];
 		$moduleid=$this->db->escape(@$data['moduleid']);
 		$imageid=(int)@$data['imageid'];
 		$imagepath = $this->db->escape(@$data['imagepath']);
 		$status=$this->db->escape(@$data['status']);
+		
 		$field=array(
 						"sitemapid",
 						"siteid",
 						"sitemapparent",
 						"sitemapname",
+						"sitemapnameen",
 						"othername",
 						"position",
 						"moduleid",
@@ -213,6 +216,7 @@ class ModelCoreSitemap extends Model
 						$siteid,
 						$sitemapparent,
 						$sitemapname,
+						$sitemapnameen,
 						$othername,
 						$position,
 						$moduleid,
@@ -229,6 +233,7 @@ class ModelCoreSitemap extends Model
 		$siteid=$this->db->escape(@$data['siteid']);
 		$sitemapparent = $this->db->escape(@$data['sitemapparent']);
 		$sitemapname = $this->db->escape(@$data['sitemapname']);
+		$sitemapnameen = $this->db->escape(@$data['sitemapnameen']);
 		$othername = $this->db->escape(@$data['othername']);
 		$position=(int)@$data['position'];
 		$moduleid=$this->db->escape(@$data['moduleid']);
@@ -239,6 +244,7 @@ class ModelCoreSitemap extends Model
 						"siteid",
 						"sitemapparent",
 						"sitemapname",
+						"sitemapnameen",
 						"othername",
 						"position",
 						"moduleid",
@@ -250,6 +256,7 @@ class ModelCoreSitemap extends Model
 						$siteid,
 						$sitemapparent,
 						$sitemapname,
+						$sitemapnameen,
 						$othername,
 						$position,
 						$moduleid,
