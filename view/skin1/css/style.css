@@ -384,6 +384,12 @@ input.ben-button:active {border-style: inset;}
 	height:165px;
 }
 
+#ben-lang
+{
+	position:absolute;
+	margin-left:900px;
+	margin-top:93px;	
+}
 
 /* Logo */
 #ben-logo {	

@@ -1,7 +1,10 @@
 <div id="ben-header">
     <div id="ben-top">
         
-    
+    	<div id="ben-lang">
+        	<a href="<?php echo HTTP_SERVER?>site/default/"><img src="<?php echo HTTP_SERVER.DIR_IMAGE?>flagvn.png" /></a>
+            <a href="<?php echo HTTP_SERVER?>site/en/"><img src="<?php echo HTTP_SERVER.DIR_IMAGE?>flagen.png" /></a>
+        </div>
         <div class="clearer">&nbsp;</div>
         
         <div class="ben-navigation">

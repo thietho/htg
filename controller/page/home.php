@@ -4,7 +4,10 @@ class ControllerPageHome extends Controller
 	function __construct() 
 	{
 		$this->iscache = true;
-	 	$this->name ="PageHome";
+		$arr=array();
+		foreach($_GET as $key => $val)
+			$arr[] = $key."=".$val;
+	 	$this->name ="PageHome".implode("_",$arr);
    	}
 	public function index()
 	{
