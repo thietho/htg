@@ -5,7 +5,7 @@ class ModelCoreSitemap extends Model
 	{
 		$query = $this->db->query("Select `sitemap`.* 
 									from `sitemap`
-									where  siteid='".$siteid."' AND sitemapid='".$sitemapid."'
+									where  siteid='default' AND sitemapid='".$sitemapid."'
 									");
 		return $query->row;
 	}
@@ -14,7 +14,7 @@ class ModelCoreSitemap extends Model
 	{
 		$query = $this->db->query("Select `sitemap`.* 
 									from `sitemap`
-									where `sitemap`.status not like 'Delete' AND siteid = '".$siteid."' ".$where.
+									where `sitemap`.status not like 'Delete' AND siteid = 'default' ".$where.
 									" ORDER BY position, siteid, id"
 									);
 		return $query->rows;
@@ -60,7 +60,7 @@ class ModelCoreSitemap extends Model
 	
 /*	public function getListChild($parentid)
 	{
-		$query = $this->db->query("Select * From sitemap where sitemapparent='".$parentid."' and siteid='".$siteid."' Order By position");
+		$query = $this->db->query("Select * From sitemap where sitemapparent='".$parentid."' and siteid='default' Order By position");
 		return $query->rows;
 	}*/
 
@@ -252,7 +252,7 @@ class ModelCoreSitemap extends Model
 		$value=array(
 						$position
 					);
-		$where="sitemapid = '".$sitmapid."' AND siteid = '".$siteid."'";
+		$where="sitemapid = '".$sitmapid."' AND siteid = 'default'";
 		$this->db->updateData('sitemap',$field,$value,$where);
 	}
 	
@@ -261,7 +261,7 @@ class ModelCoreSitemap extends Model
 		if(count($this->getListByParent($id, $siteid))==0)
 		{
 			$sitemapid=$id;
-			$where="sitemapid = '".$sitmapid."' AND siteid = '".$siteid."'";
+			$where="sitemapid = '".$sitmapid."' AND siteid = 'default'";
 			$this->db->deleteData('sitemap',$where);
 			return true;
 		}

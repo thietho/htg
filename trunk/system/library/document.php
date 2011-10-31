@@ -23,7 +23,9 @@ final class Document {
 						   'pending' => "Đang chờ thanh toán",
 						   'completed' => "Đã thanh toán"
 						   );
+	
 	private $filepath;
+	
 	public function __construct() 
 	{
 		$this->db = Registry::get('db');
@@ -36,6 +38,15 @@ final class Document {
 		$this->loadSetting();
 		$this->title = $this->setup['Title'];
 		print_r($_SESSION);
+		
+	}
+	
+	public function getPrefix($str)
+	{
+		if($str == SITEID)
+			return "";
+		else
+			return trim($str);
 	}
 	
 	private function loadSetting()

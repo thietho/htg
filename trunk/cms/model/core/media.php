@@ -311,8 +311,13 @@ class ModelCoreMedia extends ModelCoreFile
 		
 		$title=$this->db->escape(@$data['title']);
 		$summary=$this->db->escape(@$data['summary']);
-		$price=$this->db->escape(@$data['price']);
 		$description=(@$data['description']);
+		
+		$titleen=$this->db->escape(@$data['titleen']);
+		$summaryen=$this->db->escape(@$data['summaryen']);
+		$descriptionen=(@$data['descriptionen']);
+		
+		$price=$this->db->escape(@$data['price']);
 		$author=$this->db->escape(@$data['author']);
 		$source=$this->db->escape(@$data['source']);		
 		$imageid=(int)@$data['imageid'];
