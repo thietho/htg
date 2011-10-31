@@ -104,7 +104,7 @@ class ControllerCoreSitemap extends Controller
 			$data['imageid'] = $file['fileid'];
 			$data['imagepath'] = $file['filepath'];
 			$data['status'] = $this->request->post['status'];
-			$data['languageid'] = 1;
+			
 			$this->model_core_sitemap->insertSiteMap($data);
 			$this->session->data['success'] = $this->language->get('text_success');
 			$this->redirect($this->url->http('core/sitemap'));
@@ -131,7 +131,6 @@ class ControllerCoreSitemap extends Controller
 			$data['siteid'] = $this->user->getSiteId();
 			$data['imageid'] = $file['fileid'];
 			$data['imagepath'] = $file['filepath'];
-			$data['languageid'] = 1;
 			
 			$this->model_core_sitemap->updateSiteMap($data);
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -177,6 +176,7 @@ class ControllerCoreSitemap extends Controller
 			
 			$this->data['sitemap']['sitemapid'] = $sitemap['sitemapid'];
 			$this->data['sitemap']['sitemapname'] = $sitemap['sitemapname'];
+			$this->data['sitemap']['sitemapnameen'] = $sitemap['sitemapnameen'];
 			$this->data['sitemap']['sitemapparent'] = $sitemap['sitemapparent'];
 			$this->data['sitemap']['moduleid'] = $sitemap['moduleid'];
 			$this->data['sitemap']['position'] = $sitemap['position'];

@@ -3,7 +3,7 @@
 	<div class="ben-left" id="ben-maincontent">
     	<div class="ben-section">
         
-        	<div class=" ben-section-title">Trang chủ</div>
+        	<div class=" ben-section-title"><?php echo $this->document->text['text_home']?></div>
             
             <div class=" ben-section-content">
             

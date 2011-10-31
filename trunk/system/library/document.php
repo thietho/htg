@@ -37,7 +37,7 @@ final class Document {
 		$this->getData();
 		$this->loadSetting();
 		$this->title = $this->setup['Title'];
-		print_r($_SESSION);
+		
 		
 	}
 	

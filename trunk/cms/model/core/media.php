@@ -352,7 +352,10 @@ class ModelCoreMedia extends ModelCoreFile
 						'filepath',
 						'groupkeys',
 						'status',
-						'updateddate'
+						'updateddate',
+						'titleen',
+						'summaryen',
+						'descriptionen'
 					);
 		$value=array(
 						$mediaparent,
@@ -371,7 +374,10 @@ class ModelCoreMedia extends ModelCoreFile
 						$filepath,
 						$groupkeys,
 						$status,
-						$updateddate
+						$updateddate,
+						$titleen,
+						$summaryen,
+						$descriptionen
 					);
 		
 		$where="mediaid = '".$mediaid."'";
