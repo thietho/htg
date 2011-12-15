@@ -4,9 +4,17 @@ class ControllerCommonHeader extends Controller
 	public function index()
 	{
 		$this->load->model("core/media");
+		$this->load->model('core/sitemap');
+		$siteid = $this->member->getSiteId();
+		$sitemaps = $this->model_core_sitemap->getListByModule("module/album", $siteid);
+		$arrsitemapid = $this->string->matrixToArray($sitemaps,"sitemapid");
+		$queryoptions = array();
+		$queryoptions['mediaparent'] = '%';
+		$queryoptions['mediatype'] = '%';
+		$queryoptions['refersitemap'] = $arrsitemapid;
+		$queryoptions['groupkeys'] = 'sanphamhot';
 		
-		$where = " AND groupkeys like '%[sanphamhot]%'";
-		$medias = $this->model_core_media->getList($where);
+		$medias = $this->model_core_media->getPaginationList($queryoptions);
 		
 		$template = array(
 							  'template' => "common/product.tpl",
