@@ -14,14 +14,14 @@ class ControllerModuleInformation extends Controller
 			$sitemapid = $this->document->sitemapid;
 		
 		
-		$this->data['post'] = $this->model_core_media->getItem($this->member->getSiteId().$sitemapid);
-		$this->document->title .= " - ".$this->data['post']['title'];
+		$this->data['post'] = $this->model_core_media->getItem('default'.$sitemapid);
+		$this->document->title .= " - ".$this->data['post']['title'.$this->document->getPrefix($this->member->getSiteId())];
 		if(count($this->data['post']) == 0)
 		{
 			$this->data['post']['description'] = "Updating...";
 		}
 		
-		$this->data['post']['description'] = html_entity_decode($this->data['post']['description']);
+		$this->data['post']['description'] = html_entity_decode($this->data['post']['description'.$this->document->getPrefix($this->member->getSiteId())]);
 		$this->data['child'] = $this->model_core_media->getListByParent($this->member->getSiteId().$sitemapid," AND mediatype = 'subinfor' Order by position");
 		
 		$this->id="information";
