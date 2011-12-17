@@ -25,7 +25,7 @@ class ModelCoreMedia extends ModelCoreFile
 		$query = $this->db->query($sql);
 		return $query->rows;
 	}
-	public function getMedias($where="", $from=0, $to=5)
+	public function getMedias($where="", $from=0, $to=0)
 	{
 		
 		$sql = "Select `media`.* 
@@ -40,7 +40,7 @@ class ModelCoreMedia extends ModelCoreFile
 		return $query->rows;
 	}
 	
-	public function getPaginationList($options, $step=0, $to=20)
+	public function getPaginationList($options, $step=0, $to=0)
 	{
 		//From
 		if((int)$step < 0) $step = 0;
