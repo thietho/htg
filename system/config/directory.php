@@ -1,7 +1,7 @@
 <?php
 // HTTP
-define('HTTP_IMAGE', 'http://localhost:81/htg.com.vn/file/');
-define('HTTP_SERVER', 'http://localhost:81/htg.com.vn/');
+define('HTTP_IMAGE', 'http://localhost:81/htg/file/');
+define('HTTP_SERVER', 'http://localhost:81/htg/');
 
 // HTTPS
 define('HTTPS_SERVER', '');
