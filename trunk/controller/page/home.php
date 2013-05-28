@@ -3,7 +3,7 @@ class ControllerPageHome extends Controller
 {
 	function __construct() 
 	{
-		$this->iscache = true;
+		//$this->iscache = true;
 		$arr=array();
 		foreach($_GET as $key => $val)
 			$arr[] = $key."=".$val;

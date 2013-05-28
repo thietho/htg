@@ -1,5 +1,5 @@
 
-/* Text and/or Image Crawler Script v1.5 (c)2009-2011 John Davenport Scheuer
+/* Text and/or Image Crawler Script v1.53 (c)2009-2012 John Davenport Scheuer
    as first seen in http://www.dynamicdrive.com/forums/
    username: jscheuer1 - This Notice Must Remain for Legal Use
    updated: 4/2011 for random order option, more (see below)
@@ -13,7 +13,18 @@
    Internal workings enhanced for greater speed of execution, less memory usage.
    */
 
-///////////////// No Need to Edit - Configuration is Done in the On Page Call(s) /////////////////
+/* Update 11/2011 - Detect and randomize td elements within a single table with a single tr */
+
+// updated 7/2012 to 1.51 for optional integration with 3rd party initializing scripts -
+// ref: http://www.dynamicdrive.com/forums/showthread.php?p=278161#post278161
+// updated 8/2012 to 1.52 for greater compatibility with IE in Quirks Mode
+
+/* Update 10/2012 to v1.53 - Adds optional persist property to have the crawler remember its
+   position and direction page to page and on page reload. To enable it in the marqueeInit set
+   persist: true,
+   */
+
+///////////////// No Need to Edit - Configuration is Done in the On Page marqueeInit call(s) /////////////////
 
 
 function marqueeInit(config){
@@ -25,6 +36,8 @@ function marqueeInit(config){
 (function(){
 
  if(!document.createElement) return;
+ 
+ if(typeof opera === 'undefined'){window.opera = false;}
 
  marqueeInit.ar = [];
 
@@ -70,7 +83,8 @@ function marqueeInit(config){
   marqueeInit.table = [];
   window.attachEvent('onload', function(){
    marqueeInit.OK = true;
-   for(var i = 0; i < marqueeInit.table.length; ++i)
+   var i = -1, limit = marqueeInit.table.length;
+   while(++i < limit)
    marqueeInit.run(marqueeInit.table[i]);
   });
  }
@@ -109,17 +123,16 @@ function marqueeInit(config){
  }
 
  function randthem(tag){
-  var els = oldie? tag.all : tag.getElementsByTagName('*'), i = els.length - 1, childels = [], newels = [];
-  for (i; i > -1; --i){
+  var els = oldie? tag.all : tag.getElementsByTagName('*'), i = els.length, childels = [];
+  while (--i > -1){
    if(els[i].parentNode === tag){
     childels.push(els[i]);
-    newels.push(els[i].cloneNode(true));
    }
   }
-  newels.sort(function(){return 0.5 - Math.random();});
-  i = childels.length - 1;
-  for (i; i > -1; --i){
-   tag.replaceChild(newels[i], childels[i]);
+  childels.sort(function(){return 0.5 - Math.random();});
+  i = childels.length;
+  while (--i > -1){
+   tag.appendChild(childels[i]);
   }
  }
 
@@ -127,11 +140,16 @@ function marqueeInit(config){
   var p, u, s, a, ims, ic, i, marqContent, cObj = this;
   this.mq = marqueeInit.ar[c];
   if(this.mq.random){
+   if(tag.getElementsByTagName && tag.getElementsByTagName('tr').length === 1 && tag.childNodes.length === 1){
+    randthem(tag.getElementsByTagName('tr')[0]);
+   } else {
    randthem(tag);
+   }
   }
   for (p in defaultconfig)
    if((this.mq.hasOwnProperty && !this.mq.hasOwnProperty(p)) || (!this.mq.hasOwnProperty && !this.mq[p]))
     this.mq[p] = defaultconfig[p];
+  this.mq.direction = this.mq.persist && this.cookie.get(this.mq.uniqueid)? this.cookie.get(this.mq.uniqueid).split(':')[2] : this.mq.direction;
   this.mq.style.width = !this.mq.style.width || isNaN(parseInt(this.mq.style.width))? '100%' : this.mq.style.width;
   if(!tag.getElementsByTagName('img')[0])
    this.mq.style.height = !this.mq.style.height || isNaN(parseInt(this.mq.style.height))? tag.offsetHeight + 3 + 'px' : this.mq.style.height;
@@ -203,6 +221,9 @@ function marqueeInit(config){
    this.c.style.height = this.m.offsetHeight + 4 + 'px';
   this.c.appendChild(this.m.cloneNode(true));
   this.m = [this.m, this.m.nextSibling];
+  if(typeof this.mq.initcontent === 'function'){
+   this.mq.initcontent.apply(this.mq, [this.m]);
+  }
   if(this.mq.mouse === 'cursor driven'){
    this.r = this.mq.neutral || 16;
    this.sinc = this.mq.inc;
@@ -229,12 +250,12 @@ function marqueeInit(config){
     this.c.onmouseout = function(e){if(!cObj.contains(e)) cObj.slowdeath();};
   }
   this.w = this.m[0].offsetWidth;
-  this.m[0].style.left = 0;
+  this.m[0].style.left = this.mq.persist && this.cookie.get(this.mq.uniqueid)? this.cookie.get(this.mq.uniqueid).split(':')[0] : 0;
   this.c.id = 'marq_kill_marg_bord';
   this.m[0].style.top = this.m[1].style.top = Math.floor((this.c.offsetHeight - this.m[0].offsetHeight) / 2 - oldie) + 'px';
   this.c.id = '';
   this.c.removeAttribute('id', 0);
-  this.m[1].style.left = this.w + 'px';
+  this.m[1].style.left = this.mq.persist && this.cookie.get(this.mq.uniqueid)? this.cookie.get(this.mq.uniqueid).split(':')[1] : this.w + 'px';
   s = this.mq.moveatleast? Math.max(this.mq.moveatleast, this.sinc) : (this.sinc || this.mq.inc);
   while(this.c.offsetWidth > this.w - s && --exit){
    w = isNaN(this.cw[0])? this.w - s : --this.cw[0];
@@ -267,8 +288,33 @@ function marqueeInit(config){
    this.m[1].style.left = parseInt(this.m[0].style.left) - d * this.w + 'px';
   this.m[0].style.left = parseInt(this.m[0].style.left) + d * this.mq.inc + 'px';
   this.m[1].style.left = parseInt(this.m[1].style.left) + d * this.mq.inc + 'px';
+  if(window.opera && this.mq.persist){
+   this.cookie.set(this.mq.uniqueid, this.m[0].style.left + ':' + this.m[1].style.left + ':' + this.mq.direction);
+  }
   setTimeout(function(){cObj.runit();}, 30 + (this.mq.addDelay || 0));
  }
+
+ Marq.prototype.cookie = {
+  set: function(n, v, d){ // cook.set takes (name, value, optional_persist_days) - defaults to session if no days specified
+   if(d){var dt = new Date(); 
+    dt.setDate(dt.getDate() + d);
+   d = '; expires=' + dt.toGMTString();}
+   document.cookie = n + '=' + escape(v) + (d || '') + '; path=/';
+  },
+  get: function(n){ // cook.get takes (name)
+   var c = document.cookie.match('(^|;)\x20*' + n + '=([^;]*)');
+   return c? unescape(c[2]) : null;
+  },
+  kill: function(n){ // cook.kill takes (name)
+   cook.set(n, '', -1);
+  },
+  killall: function(){ // cook.killall takes no parameters
+   var cookies = document.cookie.split(';'), i = cookies.length - 1;
+   for (i; i > -1; --i){
+    cook.kill(cookies[i].split('=')[0]);
+   }
+  }
+ };
 
  Marq.prototype.directspeed = function(e){
   e = e || window.event;
@@ -303,9 +349,22 @@ function marqueeInit(config){
   }
  }
 
- if (window.addEventListener)
+ function unload(){
+  for(var m, i = 0; i < marqueeInit.ar.length; ++i){
+   if(marqueeInit.ar[i] && marqueeInit.ar[i].persist && marqueeInit.ar[i].setup){
+    m = marqueeInit.ar[i].setup;
+    m.cookie.set(m.mq.uniqueid, m.m[0].style.left + ':' + m.m[1].style.left + ':' + m.mq.direction);
+   }
+  }
+ }
+
+ if (window.addEventListener){
   window.addEventListener('resize', resize, false);
- else if (window.attachEvent)
+  window.addEventListener('unload', unload, false);
+ }
+ else if (window.attachEvent){
   window.attachEvent('onresize', resize);
+  window.attachEvent('onunload', unload);
+ }
 
 })();
